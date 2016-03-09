@@ -1,0 +1,4 @@
+{
+	"port": 8080,
+	"crawlers": "bot|spider|slurp"
+}
