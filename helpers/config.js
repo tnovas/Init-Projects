@@ -1,4 +1,4 @@
-var config = require('../config');
+var config = require('../webConfig');
 
 var configuration = {
 	GetPort: function(){

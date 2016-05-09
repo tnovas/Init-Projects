@@ -1,0 +1,142 @@
+body, a, a:hover, a:active{
+	font-family: sans-serif;
+}
+
+a, header {
+	color: white;
+}
+
+header > div.container {
+	text-align: center;
+    margin-bottom: 2%;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+label.required:after {
+	content: '\00a0\002A\00a0';
+	color: red;
+}
+
+.fa:after, .glyphicon:after {
+	content: "\00a0";
+}
+
+.separator:after {
+	content: '\00a0\007C\00a0';
+}
+
+.text-header {
+	background-color: #616161;
+	padding-bottom: 15px;
+}
+
+nav.navbar-inverse {
+	border-radius: 0px;
+}
+
+ul.navbar-nav > li > a:hover{
+	background-color: #464A56;	
+}
+
+section.contact{
+	max-width: 600px;
+	margin: auto;
+}
+
+section.skills{
+    margin: auto;
+    max-width: 800px;
+}
+
+section.workLine{
+	background-color: black;
+	height: 100px;
+}
+
+.circular-bar{
+  width: 300px;
+    height: 300px;
+}
+
+.circular-bar {
+  width: 300px;
+  height: 300px;
+}
+
+.arcs .outer-circle {
+  fill: #fff;
+  stroke: #aaa;
+  stroke-width: 1;
+}
+.arcs .outer-arc {
+  fill: #1a8eff;
+  stroke: #26b;
+  stroke-width: 1;
+}
+.arcs .inner-circle {
+  fill: #fff;
+  stroke: #aaa;
+  stroke-fill: 1;
+}
+.arcs .inner-arc {
+  fill: none;
+  stroke: #26b;
+  stroke-width: 1;
+}
+
+@media (min-width: 992px) {
+	div.row-col-md-15 > div.col-md-2{
+	    width: 13.666667%;
+	}
+}
+
+@media (max-width: 480px){
+	div.solo{
+		margin-left: 25%;	
+	}
+}
+
+@media (min-width: 766px){
+	section.skills > div.row:nth-child(2){
+	    max-width: 80%;
+		margin-left: 10%;
+	}
+
+	section.skills > div.row:first-child div:first-child {
+	    animation: 
+	        opacity 5s,
+		    loadHit 5s linear;
+	}
+
+
+	section.skills > div.row:first-child div:nth-child(2){
+	    animation: 
+	    	opacity 4s ease,
+	    	moveHit 1s linear 2.5s;
+	}
+
+	section.skills > div.row:first-child div:nth-child(3) {
+	    animation: 
+	    	opacity 4s ease,
+	    	moveHit 1s linear 2.7s;
+	}
+
+	section.skills > div.row:first-child div:nth-child(4) {
+		z-index: -1;
+	    animation: 
+	    	opacity 4s ease,
+	    	drop 1s linear 2.9s,
+	    	reset 1s ease 3.8s;
+	}
+
+	section.skills > div.row:nth-child(2) div {
+		z-index: -1;
+		opacity: 0;
+	  	animation:
+	  		opacity 4s forwards 5s,
+	    	move 4s ease 5s;
+	}
+}

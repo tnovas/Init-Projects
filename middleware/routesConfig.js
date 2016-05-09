@@ -1,5 +1,4 @@
 var crawlers = require('../helpers/config').GetCrawlers();
-var express = require('express');
 
 routesConfig = function(app){
 	app.use('/public', function(req, res){

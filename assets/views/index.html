@@ -1,20 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Title</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	<meta name="description" content="Meta Description">
-	<meta name="robots" content="NOODP,NOYDIR">
-	<meta http-equiv="content-language" content="es-AR">
-	<meta name="author" content="Tomas Novas">
-	<meta property="og:image" content="LogoUrl">
-	<link hreflang="es" rel="alternate" href="URL">
-	<link rel="canonical" href="URL">
-	<link rel="shortcut icon" type="image/ico" href="LogoUrl">
-</head>
-<body>
-	Hello User
+<html ng-app="CV">
+	<head>
+		<title>Curriculum Vitae</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<base href="/">
+		<link rel="stylesheet" href="public/app.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="text-header row">
+					<h1>Tomas Novas</h1>
+					<h3>Desarrollador<span class="hidden-xs"> Front End / Back End<span></h3>
+					<span class="separator"><i class="fa fa-envelope-o"></i>tnovas@gmail.com</span>
+					<span class="separator hidden-xs"><i class="fa fa-github"></i><a href="https://github.com/tnovas/cv" target="_blank">GitHub</a></span>
+					<span class="hidden-xs"><i class="fa fa-map-marker"></i>Buenos Aires - Argentina</span>
+				</div>
+				
+				<div class="row">
+					<nav class="navbar navbar-inverse">
+					  <div class="container">
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					    </div>
 
-	<script type="text/javascript" src="public/app.min.js"></script>
-</body>
+					    <div class="collapse navbar-collapse" id="navbar-collapse">
+					      <ul class="nav navbar-nav">
+					        	<li><a href="/">Home</a></li>
+					        	<li><a href="/contact">Contacto</a></li>
+					        	<li><a href="#">Diversión</a></li>
+					    	</ul>
+					    	<ul class="nav navbar-nav navbar-right">
+					    		<li><a href="#">PDF</a></li>
+					    	</ul>
+					    </div>
+					   </div>
+					 </nav>
+				</div>
+			</div>
+		</header>
+		
+		<div class="container" ng-view></div>
+
+		<footer></footer>
+
+		<script src="public/vendor.min.js"></script>
+		<script src="public/app.min.js"></script>
+	</body>
 </html>

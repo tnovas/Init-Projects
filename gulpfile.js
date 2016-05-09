@@ -16,7 +16,11 @@ gulp.task('javascript:dev', function(){
     .pipe(plugins.concat('app.min.js'))
     .pipe(gulp.dest(pathPublic));
 
-    gulp.src(pathStatic + 'js/vendor/**/*.js')
+    gulp.src([
+        pathStatic + 'js/vendor/angularjs.js',
+        pathStatic + 'js/vendor/angular-route.js',
+        pathStatic + 'js/vendor/**/*.js'
+    ])
     .pipe(plugins.concat('vendor.min.js'))
     .pipe(gulp.dest(pathPublic));
 });
@@ -54,6 +58,8 @@ gulp.task('copy', function(){
     .pipe(gulp.dest(pathPublic + 'images'));
     gulp.src(pathStatic + 'fonts/**/*.*')
     .pipe(gulp.dest(pathPublic + 'fonts'));
+    gulp.src(pathStatic + 'js/app/components/**/*.html')
+    .pipe(gulp.dest(pathPublic + 'views'));
 });
 
 gulp.task('default', ['clean', 'javascript:dev', 'css:dev', 'copy'], function(){
